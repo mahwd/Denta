@@ -1,0 +1,285 @@
+//var
+$cl-gray: #434445;
+$cl-main: #f57e57;
+$cl-secondary: #18afd3;
+//@ mixins
+@mixin icon-left($content) {
+    content: $content;
+    margin-right: 10px;
+    margin-top: -5px;
+    height: 100px;
+    float: left;
+    color: $cl-main;
+    font-size: 1.5em;
+    font-family: 'FontAwesome';
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+}
+
+@mixin icon($icoWidth, $icoHeight, $clr, $bgClr) {
+    width: $icoWidth;
+    height: $icoHeight;
+    line-height: $icoHeight;
+    text-align: center;
+    border-radius: 50%;
+    background: $bgClr;
+    color: $clr;
+    font-size: 1.3em;
+    &:hover {
+        cursor: pointer;
+        color: #fff;
+        background: $cl-main;
+    }
+}
+
+@mixin hrUnderline() {
+    margin-top: 9px;
+    position: relative;
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 1px;
+        width: 50px;
+        background: $cl-main;
+    }
+}
+
+@mixin headerText() {
+    font-size: 18px;
+    color: darkslategray;
+    font-family: "Oswald", sans-serif;
+    text-transform: uppercase;
+    font-weight: 500;
+    padding: 0;
+    text-indent: 0;
+}
+
+@mixin linkHover() {
+    text-decoration: none;
+    vertical-align: top;
+    font-size: 20px;
+    margin-right: 4px;
+    color: #555;
+    transition: all .3s ease-in;
+    &:hover {
+        cursor: pointer;
+        color: $cl-main;
+        text-decoration: underline;
+    }
+}
+
+@mixin btn() {
+    position: relative;
+    padding: 10px 35px;
+    font-size: 16px;
+    line-height: 28px;
+    white-space: nowrap;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    border-width: 2px;
+    border-radius: 23px;
+    font-family: "Oswald", sans-serif;
+    font-weight: 400;
+    transition: .3s;
+    backface-visibility: hidden;
+    text-align: center;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    color: #fff;
+    &:hover {
+        text-decoration: none;
+        background-color: $cl-secondary;
+        color: #fff;
+    }
+    &:hover a {
+        transition: .37s ease;
+        text-decoration: none;
+        background-color: $cl-secondary;
+        color: #fff;
+    }
+
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.flex-no-wrap {
+    flex-wrap: nowrap;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-space-around {
+    justify-content: space-around;
+}
+
+.flex-space-between {
+    justify-content: space-between;
+}
+
+.flex-start {
+    justify-content: flex-start;
+}
+
+.flex-end {
+    justify-content: flex-end;
+}
+
+.center {
+    text-align: center!important;
+}
+
+.margin-auto {
+    margin: auto!important;
+}
+
+.no-padding {
+    padding: 0px!important;
+}
+
+.no-margin {
+    margin: 0px!important;
+}
+
+.stand-padding {
+    padding: 20px!important;
+}
+
+.ml-10 {
+    margin-left: 10px!important;
+}
+
+.mr-10 {
+    margin-right: 10px!important;
+}
+
+.mt-10 {
+    margin-top: 10px!important;
+}
+
+.mb-10 {
+    margin-bottom: 10px!important;
+}
+
+.ml-20 {
+    margin-left: 20px!important;
+}
+
+.mr-20 {
+    margin-right: 20px!important;
+}
+
+.mt-20 {
+    margin-top: 20px!important;
+}
+
+.mb-20 {
+    margin-bottom: 20px!important;
+}
+
+.mt-50 {
+    margin-top: 50px!important;
+}
+
+.mb-50 {
+    margin-bottom: 50px!important;
+}
+
+.ml-40 {
+    margin-left: 40px!important;
+}
+
+.mr-40 {
+    margin-right: 40px!important;
+}
+
+.mt-30 {
+    margin-top: 30px!important;
+}
+
+.mb-30 {
+    margin-bottom: 30px!important;
+}
+
+.ml-30 {
+    margin-left: 30px!important;
+}
+
+.mr-30 {
+    margin-right: 30px!important;
+}
+
+.mt-40 {
+    margin-top: 40px!important;
+}
+
+.mb-40 {
+    margin-bottom: 40px!important;
+}
+
+input {
+    padding: 20px!important;
+}
+
+.activeHover {
+    transition: .3s ease;
+    @media (min-width: 992px) {
+        bottom: 50px!important;
+    }
+}
+
+#darkBlue .hoverCont .col-md-12:first-child {
+    background: darken($cl-secondary, 12%);
+}
+
+//bootstrap col-md-5ths
+.col-xs-5ths,
+.col-sm-5ths,
+.col-md-5ths,
+.col-lg-5ths {
+    position: relative;
+    height: auto;
+    min-height: 1px;
+    //    padding-right: 15px;
+    //    padding-left: 15px;
+}
+
+.col-xs-5ths {
+    width: 20%;
+    float: left;
+}
+
+@media (min-width: 768px) {
+    .col-sm-5ths {
+        width: 20%;
+        float: left;
+    }
+}
+
+@media (min-width: 992px) {
+    .col-md-5ths {
+        width: 20%;
+        float: left;
+    }
+}
+
+@media (min-width: 1200px) {
+    .col-lg-5ths {
+        width: 20%;
+        float: left;
+    }
+}
+
+@import 'team';
+@import 'grid';
+@import 'blog';
+@import 'forms';
+@import 'contacts';

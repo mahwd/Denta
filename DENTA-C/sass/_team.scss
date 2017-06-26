@@ -1,0 +1,301 @@
+
+        #team {
+            padding-bottom: 100px;
+            .container {
+                @media (max-width: 480px) {
+                    width:100%;
+                    padding: 0;
+                    margin: 0;
+                    overflow-x: hidden;
+                }
+                .row {
+                    @media (max-width: 480px) {
+                        padding: 0;
+                        margin: 0;
+                    }
+                    .teamHeader {
+                        margin-top: 80px;
+                        h1 {
+                            text-align: center;
+                            text-transform: uppercase;
+                            line-height: 1.13043;
+                            font-size: 46px;
+                            letter-spacing: .5px;
+                            color: $cl-gray;
+                            font-weight: 400;
+                        }
+                        hr {
+                            height: 5px;
+                            width: 80px;
+                            margin: 40px auto 35px;
+                            background: $cl-main;
+                        }
+                    }
+                }
+                .row {
+                    margin: 0;
+                    padding: 0;
+                    .card {
+                        overflow: hidden;
+                        height: auto;
+                        @media (max-width: 992px) {
+                            margin-left: 17%;
+                        }
+                        .col-md-12 {
+                            padding: 0;
+                            img {
+                                padding: 0;
+                            }
+                        }
+                        .hoverCont {
+                            position: relative;
+                            bottom: 0;
+                            .col-md-12 {
+                                position: relative;
+                                top: 0;
+                                padding: 0;
+                                background: $cl-secondary;
+                                height: 120px;
+                                @media(max-width: 992px) {
+                                    text-align: center;
+                                }
+                                h1 {
+                                    color: #fff;
+                                    font-size: 22px;
+                                    margin: 40px auto auto 20px;
+                                }
+                                p {
+                                    color: #fff;
+                                    margin-left: 20px;
+                                    font-style: italic;
+                                }
+                                &:last-child {
+                                    @media(max-width: 992px) {
+                                        position: relative;
+                                        top: 0;
+                                        margin-bottom: 20px;
+                                    }
+                                    position: absolute;
+                                    top: 120px;
+                                    height: 50px;
+                                    transition: all .5s ease;
+                                    background: $cl-main;
+                                    &:hover {
+                                        background: darken($cl-main, 18%);
+                                        cursor: pointer;
+                                    }
+                                    p {
+                                        letter-spacing: 0.03em;
+                                        font-size: 15px;
+                                        text-transform: uppercase;
+                                        line-height: 50px;
+                                        text-align: center;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .container-fluid {
+                padding: 0;
+                .row {
+                    margin: 0;
+                    padding: 0;
+                    .card {
+                        overflow: hidden;
+                        padding: 0;
+                        height: auto;
+                        @media (max-width: 992px) {
+                            margin-left: 25%;
+                        }
+                        .col-md-12 {
+                            padding: 0;
+                            img {
+                                //                        position: relative;
+                                padding: 0;
+                            }
+                        }
+                        .hoverCont {
+                            position: relative;
+                            bottom: 0;
+                            .col-md-12 {
+                                position: relative;
+                                top: 0;
+                                padding: 0;
+                                background: $cl-secondary;
+                                height: 120px;
+                                @media(max-width: 992px) {
+                                    text-align: center;
+                                }
+                                h1 {
+                                    color: #fff;
+                                    font-size: 22px;
+                                    margin: 40px auto auto 20px;
+                                }
+                                p {
+                                    color: #fff;
+                                    margin-left: 20px;
+                                    font-style: italic;
+                                }
+                                &:last-child {
+                                    @media(max-width: 992px) {
+                                        position: relative;
+                                        top: 0;
+                                        margin-bottom: 20px;
+                                    }
+                                    position: absolute;
+                                    top: 120px;
+                                    height: 50px;
+                                    transition: all .5s ease;
+                                    background: $cl-main;
+                                    &:hover {
+                                        background: darken($cl-main, 18%);
+                                        cursor: pointer;
+                                    }
+                                    p {
+                                        letter-spacing: 0.03em;
+                                        font-size: 15px;
+                                        text-indent: -35px;
+                                        text-transform: uppercase;
+                                        line-height: 50px;
+                                        text-align: center;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            //                                        //  3 columns layout //
+            .row {
+                margin-top: 60px;
+                @media (max-width: 992px) {
+                    .blogItem:last-child {
+                        padding-top:25px;
+                    }
+                }
+                .blogItem {
+                    display: flex;
+                    justify-content: flex-start;
+                    flex-wrap: wrap;
+                    padding-left: -15px;
+                    @media (max-width: 480px) {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        &:last-child {
+                            padding-top: 25px;
+                        }
+                    }
+                    .foto {
+                        img {
+                            width: 110px;
+                            height: 110px;
+                        }
+                        @media (max-width: 480px) {
+                            margin: 0 auto;
+                        }
+                    }
+                    .info {
+                        width: 180px;
+                        height: 110px;
+                        margin-left: 18px;
+                        @media (max-width: 479px) {
+                            padding-top: 30px;
+                            margin-left: 0;
+                        }
+                        @media (min-width:480px) {
+                            margin-left: 0!important;
+                        }
+                        @media(min-width: 530px){
+                            margin-left: 15px!important;
+                        }
+                        @media (min-width:768px) {
+                            margin-left: 15px!important;
+                        }
+                        @media (min-width:992px) {
+                            margin-left: 0!important;
+                        }
+                        @media (min-width:1200px) {
+                            margin-left: 15px!important;
+                        }
+
+                        h3 {
+                            text-transform: capitalize;
+                            margin-top: 0 !important;
+                            line-height: 0;
+                            font-weight: 700;
+                            margin-bottom: 10px;
+                            color: #18afd3;
+                            line-height: 1.1;
+                            font-size: 22px;
+                            @media (max-width: 480px) {
+                                text-align: center;
+                            }
+                        }
+                        p {
+                            font-family: "Lato", Helvetica, Arial, sans-serif;
+                            color: #868686;
+                            font-size: 15px;
+                            line-height: 0.4;
+                            @media (max-width: 480px) {
+                                text-align: center;
+                            }
+                        }
+                        span {
+                            margin-top: 20px;
+                            font-size: 20px;
+                            line-height: 26px;
+                            color: #18afd3;
+                            vertical-align: baseline;
+                            @media (max-width: 480px) {
+                                text-align: center;
+                            }
+                        }
+                        a {
+                            color: #000;
+                            line-height: 1.33333;
+                            font-size: 18px;
+                            font-weight: 500;
+                            position: relative;
+                            top: -3px;
+                            left: 3px;
+                            &:hover {
+                                color: #f46c3f;
+                            }
+                            @media (max-width: 480px) {
+                                text-align: center;
+                            }
+                        }
+                    }
+                    .about {
+                        width: 100%;
+                        color: #868686;
+                        padding-top: 20px;
+                        padding-bottom: 5px;
+                        line-height: 25px;
+                        @media (max-width: 480px) {
+                            margin-top: 20px;
+                        }
+                    }
+                    .btn_div {
+                        @include btn();
+                        background: $cl-main;
+                        a {
+                            color: #fff;
+                            font-size: 1.1em;
+                            &:hover {
+                                text-decoration: none;
+                                color: #fff;
+                            }
+                        }
+
+                    }
+
+                }
+                /* end blog Item*/
+            }
+        }
+        /*   end team  */
+    /*  end conten 1     */

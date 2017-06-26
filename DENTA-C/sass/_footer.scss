@@ -1,0 +1,111 @@
+footer{
+    .footer-brand{
+        img{
+            @include laptop{
+                margin: 0 auto;
+            }
+        }
+    }
+    .col-md-12{
+        @include laptopMin{
+            text-align: left;
+        }
+    }
+    position: relative;
+    z-index:1;
+    .footer-social{
+        @include laptop{
+            padding-bottom: 50px;
+        }
+        .list-inline{
+            @include laptop{
+                margin-left: 7px;
+            }
+        }
+        .icon-o{
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            font-size: 18px;
+            transition: .3s;
+            color: #868686;
+            background: #fff;
+            border: none;
+            &:hover{
+                color: #fff;
+                background: #f57e57;
+            }
+        }
+    }
+    .contact-us,.newsletter{
+        >div{
+            text-align: left;
+        }
+        h6{
+            color: #fff;
+        }
+        li{
+            padding-bottom: 10px;
+        }
+        a{
+            color: #fff;
+        }
+        i{
+            color: #f57e57;
+            font-size: 24px;
+            line-height: 24px;
+            padding-right: 17px;
+        }
+    }
+    .newsletter{
+        @include laptop{
+            padding-left: 0;
+        }
+        form{
+            position: relative;
+            .form-group{
+                position: relative;
+                .input-group{
+                    position: relative;
+                    display: table;
+                    border-collapse: separate;
+                    input{
+                        line-height: 24px;
+                        color: #212121;
+                        background: #fff;
+                        font-size: 14px;
+                        display: table-cell;
+                        position: relative;
+                        z-index: 2;
+                        float: left;
+                        width: 100%;
+                        margin-bottom: 0;
+                        border-radius: 3px;
+                        height: 40px;
+                        padding: 7px 12px;
+                        border: 0;
+                    }
+                    .input-group-btn{
+                        position: relative;
+                        font-size: 0;
+                        white-space: nowrap;
+                        vertical-align: middle;
+                        width: 1%;
+                        display: table-cell;
+                        button{
+                            font-size: 14px;
+                            border-radius: 5px;
+                            line-height: 24px;
+                            z-index: 2;
+                            margin-left: -1px;
+                            height: 40px;
+                            padding: 7px 12px;
+                            position: relative;
+                            left: -4px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

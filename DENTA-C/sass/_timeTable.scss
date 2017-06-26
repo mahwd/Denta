@@ -1,0 +1,145 @@
+$color1: #434445;
+$color2: #868686;
+$color3:#18afd3;
+$colorBor:#f57e57;
+#timetable{
+    padding-top:50px;
+    font-family: "Lato", sans-serif;
+    ul{
+        padding-left:0;
+        border-bottom:1px solid lightgray;
+        li{
+            text-transform: uppercase;
+            font-family: "Oswald", sans-serif;
+            letter-spacing: 0.04em;
+            font-size: 18px;
+            color:$color2;
+            cursor: pointer;
+            list-style-type: none;
+            display: inline-block;
+            padding:8px 25px;
+            margin-bottom: -1px;
+            transition: all .3s  ease;
+            @media (max-width:992px){
+                    border-bottom:1px solid lightgray;
+                    border-top:1px solid lightgray;
+                    color:$color3;
+                    font-size: 15px;
+                    padding-top:14px;
+                    padding-bottom:14px;
+                }
+            &:first-child{
+                padding-left:0;
+                @media (max-width:992px){
+                    padding-left:25px;
+                }
+            }
+            i{
+                margin-top: 5px;
+                font-size: 20px;
+                font-weight: 100;
+                color:$color2;
+                display: none;
+                float: right;
+                @media (max-width:992px){
+                    display: block;
+                }
+            }
+        }
+
+        .active{
+            color: $color1;
+            border-bottom:1px solid $colorBor;
+            @media (max-width:992px){
+                border-bottom:1px solid lightgray;
+                border-top:1px solid lightgray;
+                color: $color3;
+
+            }
+
+        }
+    }
+
+    #tableScroll{
+        padding-top:50px;
+        overflow-x: auto;
+        margin-bottom:40px;
+        table{
+            min-width: 700px;
+            thead{
+                th{
+                        font-family: "Lato",Helvetica,Arial,sans-serif;
+                        font-weight: normal;
+                    }
+                    @media (max-width:992px){
+                        font-size: 10px;
+                    }
+            }
+            tbody{
+                tr{
+                    width: 200px;
+                    &:last-child{
+                        border-bottom:1px solid lightgray;
+                    }
+
+
+                    td{
+                        &:first-child{
+                            width: 280px;
+                            font-size: 15px;
+                            text-align: top;
+                            // line-height: 28px;
+                        }
+                    height: 100px;
+                    width: 200px;
+                    line-height: 0px;
+
+
+                        border-left:none;
+                        border-right:none;
+                        position: relative;
+                        padding:40px 0;
+                        font-size:1.2em;
+                        .doctor{
+                            position: absolute;
+                            top:0;
+
+                            width:calc(100% - 5px);
+                            color:white;
+                            img{
+                                margin-top: 10px;
+                                margin-left: 10px;
+                            }
+                            h3{
+                                font-family: "Lato",Helvetica,Arial,sans-serif;
+                                font-size: 14px;
+                                margin-left: 10px;
+                                font-weight: 700;
+                                opacity: .92;
+                                text-transform: capitalize;
+                                color: #fff;
+                                margin-top: 10px;
+                                margin-bottom: 10px;
+                                @media (min-width:1200px){
+                                    font-size: 14px;
+                                }
+                                @media (min-width:992px) and (max-width:1199){
+                                    font-size: 12px;
+                                }
+                            }
+                            p{
+                                margin-left: 10px;
+                                margin-top: 4px;
+                                font-size: 15px;
+                                font-family: "Lato",Helvetica,Arial,sans-serif;
+                                font-style: italic;
+                                color: rgba(255,255,255, .4);
+                            }
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

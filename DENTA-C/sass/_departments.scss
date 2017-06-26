@@ -1,0 +1,178 @@
+#departament {
+    $firstRowWidth: 596px;
+    $secondRowWidth: 555px;
+    $thirdRowWidth: 530px;
+    html *:last-child {
+        margin-bottom: 0;
+    }
+    html *:first-child {
+        margin-top: 0;
+    }
+    body {
+        font-family: "Lato", Helvetica, Arial, sans-serif;
+        font-size: 15px;
+        line-height: 1.6;
+        color: #868686;
+        box-sizing: border-box;
+    }
+    div {
+        display: block;
+    }
+    p {
+        margin: 0 0 12px;
+    }
+    h3 {
+        line-height: 1.13043;
+        font-size: 46px;
+        letter-spacing: 0.03em;
+        font-family: "Oswald", sans-serif;
+        text-transform: uppercase;
+        font-weight: 400;
+        color: #434445;
+        display: block;
+        margin-top: 20px;
+        margin-bottom: 40px;
+    }
+    .hr_line {
+        width: 80px;
+        height: 4px;
+        margin: 30px 0;
+        background: #f57e57;
+        padding: 0;
+        display: block;
+        border: none;
+    }
+    .hr_line+h3 {
+        margin-top: 35px;
+    }
+    #department_p {
+        margin-top: 60px;
+        color: #868686;
+    }
+    #department_btn {
+        margin-top: 41px;
+    }
+    .btn {
+        position: relative;
+        padding: 7px 35px;
+        font-size: 16px;
+        line-height: 28px;
+        white-space: nowrap;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+        border-width: 2px;
+        border-radius: 23px;
+        font-family: "Oswald", sans-serif;
+        font-weight: 400;
+        transition: .3s;
+        backface-visibility: hidden;
+        text-align: center;
+        vertical-align: middle;
+        touch-action: manipulation;
+        cursor: pointer;
+        background-image: none;
+        border: 1px solid transparent;
+        color: #fff;
+        background-color: #f57e57;
+        border-color: #f57e57;
+        &:hover {
+            background-color: #55bbeb;
+            color: white;
+        }
+    }
+    .part_1 {
+        height: 100%;
+        padding: 90px 60px 0px 50px;
+    }
+    #row_1 {
+        height: $firstRowWidth;
+        @include laptop{
+            height: 696px;
+        }
+    }
+    #row_2 {
+        height: $secondRowWidth;
+        @include laptop{
+            height: 655px;
+        }
+    }
+    #row_3 {
+        height: $thirdRowWidth;
+        @include laptop{
+            height: 630px;
+        }
+        @include tablet{
+            margin-bottom:50px;
+        }
+    }
+    #part_1 {
+        background-size: cover;
+        height: 100%;
+        background-image: url(../img/departments-01-960-611.jpg);
+    }
+    #part_2 {
+        height: 100%;
+        background-size: cover;
+        background-image: url(../img/departments-02-960-611.jpg);
+    }
+    #part_3 {
+        height: 100%;
+        background-size: cover;
+        background-image: url(../img/departments-03-960-611.jpg);
+    }
+}
+
+@media (max-width: 768px) {
+    #part_1 {
+        display: none !important;
+    }
+    #part_2 {
+        display: none !important;
+    }
+    #part_3 {
+        display: none !important;
+    }
+    h3 {
+        font-size: 26px !important;
+    }
+    .part_1 {
+        text-align: center;
+        padding: 70px 50px 50px 40px !important;
+    }
+    .hr_line+h3 {
+        margin-top: 30px !important;
+    }
+    .hr_line {
+        margin: 0 auto !important;
+    }
+    .btn {
+        padding: 7px 22px !important;
+    }
+    #row_1 {
+        height: 430px !important;
+    }
+    #row_2 {
+        height: 400px !important;
+    }
+    #row_3 {
+        height: 380px !important;
+    }
+    @media (max-width: 360px) {
+        h3 {
+            font-size: 19px !important;
+        }
+        .btn {
+            padding: 5px 13px !important;
+            font-size: 14px !important;
+            line-height: 24px !important;
+        }
+        #department_p p {
+            font-size: 13px;
+        }
+        .part_1 {
+            padding: 50px 20px 0 10px !important;
+        }
+    }
+}
+
+

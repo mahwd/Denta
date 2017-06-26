@@ -1,0 +1,90 @@
+    #hesenForms {
+        .container {
+            .row {
+                .col-md-5,
+                .col-md-7 {
+                    .col-md-12 {
+                        h6 {
+                            @include headerText();
+                        }
+                        hr {
+                            @include hrUnderline();
+                        }
+                        #signIn {
+                            @media (max-width: 992px) {
+                                text-align: center!important;
+                            }
+                        }
+                        #span {
+                            text-align: center;
+                            @media (max-width: 992px) {
+                                text-align: center!important;
+                            }
+                        }
+                    }
+                }
+                .col-md-12 {
+                    @media (max-width: 1200px) {
+                        text-align: center!important;
+                    }
+//                    text-align: center;
+                    .duyme {
+                        @include btn();
+                        background: $cl-main;
+                    }
+                    .col-md-3 span {
+                        margin-left: 5px;
+                        line-height: 40px;
+                        text-align: center;
+                    }
+                    #socialMediaIcons {
+                        text-align: center;
+                        a {
+                            display: inline-block;
+                            width: 40px;
+                            height: 40px;
+                            background: #ccc;
+                            color: #777;
+                            border-radius: 50%;
+                            line-height: 40px;
+                            text-align: center;
+                            text-indent: -2px;
+                            &:hover {
+                                background: $cl-main;
+                                color: #fff;
+                            }
+                        }
+                    }
+                }
+            }
+            .row {
+                .col-md-7 {
+                    #email {
+                        border-radius: 69px;
+                        overflow: hidden;
+                        p {}
+                        input {
+                            max-height: 46px;
+                            border-radius: 30px;
+                            outline: 0;
+                            border: 1px solid #ccc;
+                            width: 100%;
+                            background: transparent;
+                        }
+                        .duyme {
+                            position: absolute;
+                            right: 15px;
+                            top: 1px;
+                            border: 1px solid $cl-main;
+                            border-radius: 30px;
+                            max-height: 46px;
+                            padding: 9px 45px;
+                            &:hover {
+                                border: 1px solid $cl-secondary!important;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }

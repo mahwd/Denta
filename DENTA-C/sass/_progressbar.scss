@@ -1,0 +1,233 @@
+#progressBar {
+    padding-bottom: 100px;
+    $Lato: "Lato", Helvetica, Arial, sans-serif;
+    $Oswald: "Oswald", sans-serif;
+    $mainColor: #868686;
+    $secondMainColor: #18afd3;
+    $thirdMainColor: #bdbdbd;
+    .top110 {
+        padding-top: 110px !important;
+    }
+    .top50 {
+        padding-top: 50px;
+    }
+    .top30 {
+        padding-top: 30px;
+    }
+    .margin110 {
+        margin-top: 110px;
+    }
+    .left0 {
+        padding-left: 0;
+    }
+    .top90 {
+        padding-top: 90px;
+    }
+    .top260 {
+        padding-top: 260px;
+    }
+    .hText {
+        font-weight: 400;
+        color: #434445;
+        text-align: left;
+        text-transform: uppercase;
+    }
+    .color {
+        color: $mainColor !important;
+    }
+    p,
+    hr,
+    a,
+    li {
+        font-family: $Lato;
+        font-size: 15px;
+        line-height: 1.6;
+        color: $mainColor;
+        box-sizing: border-box;
+        margin: 0 0 12px;
+        text-align: left;
+        text-decoration: none;
+    }
+    h5 {
+        line-height: 1.27273;
+        font-size: 22px;
+        font-family: $Lato;
+        text-transform: capitalize;
+        @extend .hText;
+    }
+    h6 {
+        line-height: 1.33333;
+        font-size: 18px;
+        letter-spacing: 0.06em;
+        font-family: $Oswald;
+        @extend .hText;
+        @include laptop{
+            text-align: center;
+        }
+        @include tablet{
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+    }
+    h5+* {
+        margin-top: 9px;
+    }
+    h6+* {
+        margin-top: 14px;
+    }
+    h6+hr {
+        margin-top: 9px;
+    }
+    .hr_line {
+        position: relative;
+        height: 1px;
+        padding: 0;
+        background: #e5e5e5;
+        margin-bottom: 22px !important;
+        border: none;
+        box-sizing: content-box;
+        text-align: left;
+        display: block;
+    }
+    .hr_line:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 1px;
+        width: 50px;
+        background: #f57e57;
+        box-sizing: border-box;
+    }
+    .center {
+        text-align: center;
+    }
+    .count {
+        line-height: 1.13043;
+        font-size: 46px;
+        font-weight: 700;
+    }
+    .hrCustom {
+        width: 50px;
+        height: 4px;
+        margin: 15px auto 30px;
+        background: #f57e57;
+        fill: #f57e57;
+        padding: 0;
+        color: #fff;
+        border: none;
+    }
+    .h5 {
+        margin-top: 20px;
+        font-weight: 700;
+        color: $secondMainColor;
+        text-align: center;
+    }
+    .pb_h {
+        color: $mainColor;
+        text-align: left;
+        float: left!important;
+        line-height: 1.33333;
+        font-size: 18px;
+        font-weight: 400;
+    }
+    .percent_h {
+        color: $secondMainColor;
+        text-align: left;
+        float: right!important;
+        line-height: 1.33333;
+        font-size: 18px;
+        font-weight: 400;
+    }
+    .percent_h:after {
+        content: "%";
+    }
+    .skillbars {
+        margin-top: 50px;
+        background: #e0dddd;
+        height: 100%;
+        border-radius: 5px;
+        position: relative;
+        display: block;
+        width: 100%;
+        transition-property: width, background-color;
+    }
+    .skillbar-bars {
+        fill: #f57e57;
+        height: 12px;
+        width: 0px;
+        background: #f57e57;
+        border-radius: 3px;
+    }
+    .progressBar {
+        display: inline-block;
+        position: relative;
+        text-align: center;
+        line-height: 1.2;
+    }
+    .progress-bar-circlex {
+        @extend .progressBar;
+        width: 180px;
+        height: 180px;
+    }
+    .progress-bar-circle {
+        @extend .progressBar;
+        width: 130px;
+        height: 130px;
+    }
+    .MyCircle {
+        position: absolute;
+        left: 50%;
+        width: 75%;
+        height: 75%;
+        content: '';
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+    }
+    .progress-bar-circle:before {
+        @extend .MyCircle;
+        top: 60%;
+        border: 1px solid #e5e5e5;
+    }
+    .progress-bar-circlex:before {
+        @extend .MyCircle;
+        top: 44%;
+        border: 10px solid #18afd3;
+    }
+    .progress-bar-circle span {
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        font-size: 18px;
+        line-height: 24px;
+        font-family: $Oswald;
+        color: #434445;
+        transform: translate(-50%, -50%);
+    }
+    .progress-bar-circle span:after {
+        content: "%";
+    }
+    @media(min-width:768px) {
+        .row_1 {
+            padding-left: 0;
+        }
+    }
+    @media(max-width:768px) {
+        .row_1 {
+            margin-left: 30px;
+        }
+        .myh,
+        .myhr {
+            margin-left: 40px !important;
+        }
+        .pb_h {
+            font-size: 14px;
+        }
+        .top90 {
+            padding-top: 30px;
+        }
+        h5 {
+            font-size: 18px;
+        }
+    }
+}

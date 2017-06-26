@@ -1,0 +1,43 @@
+.bg-cover{
+    text-align: left;
+    background-image: url(../img/background-breadcrumbs-01-1920x345.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 90px;
+    padding-bottom: 35px;
+    @include laptop {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        text-align: center;
+    }
+    h1{
+        @include laptop {
+            font-size: $fontSize*4;
+            line-height: 1.2;
+        }
+        @include tablet {
+            font-size: $fontSize*2.4;
+            line-height: 1.5;
+        }
+    }
+    ul{
+        margin-top: 70px;
+        @include laptop {
+            margin-top:34px;
+        }
+        li{
+            color: $white;
+            a{
+                color: $white;
+            }
+        }
+        span{
+            font-size: $fontSize*0.8;
+            line-height: 14px;
+            padding:0 10px;
+            opacity: .4;
+            color: $white;
+        }
+    }
+}

@@ -1,0 +1,478 @@
+#about-content{
+    color: rgb(134, 134, 134);
+    .few-words{
+        p{
+            &:first-child{
+                margin-bottom: 10px;
+            }
+        }
+    }
+    .scott{
+        @include laptop{
+            margin-top: 41px;
+        }
+        .unit-res{
+            .unit-body{
+                padding-left: 10px;
+                padding-top: 0;
+            }
+        }
+        .unit-body{
+            @include large{
+                padding-top: 0;
+                padding-left: 20px;
+            }
+            a{
+                &:hover{
+                    color: #f46c3f;
+                    h6{
+                        color: #f46c3f;
+                    }
+                }
+            }
+        }
+        .btn{
+            margin-top: 8px;
+        }
+    }
+    .section2{
+        @include tablet{
+            text-align: center;
+        }
+        hr{
+            @include tablet{
+                margin: 35px auto;
+            }
+        }
+    }
+    .achievment-bg{
+        display: none;
+        @include large{
+            display: block;
+            height: 575px;
+            &:before{
+                content: '';
+                position: absolute;
+                top: 0;
+                width: 44vw;
+                height: 100%;
+                background: transparent url(../img/background-02-676x545.jpg);
+                background-repeat: no-repeat;
+                background-position: top left;
+                background-size: cover;
+                z-index: 1;
+                right: 12px;
+            }
+        }
+
+    }
+    .achievment{
+        padding-left: 60px;
+    }
+}
+#about_team{
+    img{
+        cursor: pointer;
+    }
+    hr{
+        margin:35px auto 60px;
+    }
+    .row-top{
+        @include laptopMin{
+            margin-top:30px !important;
+        }
+    }
+    .container {
+        @media (max-width:480px) {
+            width: 100%;
+            padding: 0;
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        .row {
+            @media (max-width:480px) {
+                padding: 0;
+                margin: 0;
+            }
+
+            .teamHeader {
+                margin-top: 80px;
+
+                h1 {
+                    text-align: center;
+                    text-transform: uppercase;
+                    line-height: 1.13043;
+                    font-size: 46px;
+                    letter-spacing: 0.5px;
+                    color: $cl-gray;
+                    font-weight: 500;
+                }
+
+                hr {
+                    height: 5px;
+                    width: 80px;
+                    margin: 40px auto 35px;
+                    background: $cl-main;
+                }
+            }
+        }
+
+        .row {
+            margin: 0;
+            padding: 0;
+
+            .card {
+                overflow: hidden;
+                height: auto;
+                @media (max-width:992px) {
+                    margin-left: 17%;
+                }
+
+                .col-md-12 {
+                    padding: 0;
+
+                    img {
+                        padding: 0;
+                    }
+                }
+
+                .hoverCont {
+                    position: relative;
+                    bottom: 0;
+
+                    .col-md-12 {
+                        position: relative;
+                        top: 0;
+                        padding: 0;
+                        background: $cl-secondary;
+                        height: 120px;
+                        @media(max-width:992px) {
+                            text-align: center;
+                        }
+
+                        h1 {
+                            color: #fff;
+                            font-size: 22px;
+                            margin: 40px auto auto;
+                        }
+
+                        p {
+                            color: #fff;
+                            font-style: italic;
+                        }
+
+                        &:last-child {
+                            @media(max-width:992px) {
+                                position: relative;
+                                top: 0;
+                                margin-bottom: 20px;
+                            }
+                            position: absolute;
+                            top: 120px;
+                            height: 50px;
+                            transition: all 0.5s ease;
+                            background: $cl-main;
+
+                            &:hover {
+                                background: darken($cl-main, 18%);
+                                cursor: pointer;
+                            }
+
+                            p {
+                                letter-spacing: 0.03em;
+                                font-size: 15px;
+                                text-transform: uppercase;
+                                line-height: 50px;
+                                text-align: center;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .container-fluid {
+        padding: 0;
+
+        .row {
+            margin: 0;
+            padding: 0;
+
+            .card {
+                overflow: hidden;
+                padding: 0;
+                height: auto;
+                @media (max-width:992px) {
+                    margin-left: 25%;
+                }
+
+                .col-md-12 {
+                    padding: 0;
+
+                    img {
+                        //                        position: relative;
+                        padding: 0;
+                    }
+                }
+
+                .hoverCont {
+                    position: relative;
+                    bottom: 0;
+
+                    .col-md-12 {
+                        position: relative;
+                        top: 0;
+                        padding: 0;
+                        background: $cl-secondary;
+                        height: 120px;
+                        @media(max-width:992px) {
+                            text-align: center;
+                        }
+
+                        h1 {
+                            color: #fff;
+                            font-size: 22px;
+                            margin: 40px auto auto 20px;
+                        }
+
+                        p {
+                            color: #fff;
+                            margin-left: 20px;
+                            font-style: italic;
+                        }
+
+                        &:last-child {
+                            @media(max-width:992px) {
+                                position: relative;
+                                top: 0;
+                                margin-bottom: 20px;
+                            }
+                            position: absolute;
+                            top: 120px;
+                            height: 50px;
+                            transition: all 0.5s ease;
+                            background: $cl-main;
+
+                            &:hover {
+                                background: darken($cl-main, 18%);
+                                cursor: pointer;
+                            }
+
+                            p {
+                                letter-spacing: 0.03em;
+                                font-size: 15px;
+                                text-indent: -35px;
+                                text-transform: uppercase;
+                                line-height: 50px;
+                                text-align: center;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @mixin linkHover() {
+        text-decoration: none;
+        vertical-align: top;
+        font-size: 20px;
+        margin-right: 4px;
+        color: #555;
+        transition: all 0.3s ease-in;
+
+        &:hover {
+            color: $cl-main;
+            text-decoration: underline;
+        }
+    }
+    @mixin btn() {
+        position: relative;
+        padding: 9px 35px;
+        font-size: 16px;
+        color: #fff;
+        line-height: 28px;
+        white-space: nowrap;
+        text-transform: uppercase;
+        letter-spacing: 0.04px;
+        border-width: 2px;
+        border-radius: 23px;
+        font-family: "Oswald", sans-serif;
+        font-weight: 400;
+        transition: all 0.3s ease-in;
+        backface-visibility: hidden;
+        box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.15);
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: none;
+            background: $cl-secondary;
+            cursor: pointer;
+        }
+    }
+    //                                        //  3 columns layout //
+    .container {
+        .row {
+            > .col-md-4 {
+                margin-top: 40px;
+                padding: 0;
+
+                .cardHeader {
+                    padding: 0;
+                    text-align: left;
+
+                    .col-md-4 {
+                        padding: 0;
+
+                        img {
+                            float: left;
+                        }
+                    }
+
+                    .col-md-12 {
+                        text-indent: 10px;
+
+                        h3 {
+                            margin: 10px 0 0;
+                            width: 100%;
+                            float: left;
+                            font-size: 22px;
+                            font-weight: 700;
+                            color: $cl-secondary;
+                        }
+
+                        p {
+                            margin: 10px 0 0;
+                            color: #555;
+                            font-size: 14px;
+                            width: 100%;
+                            float: left;
+                        }
+
+                        h4 {
+                            color: #353637;
+                            width: 100%;
+                            float: left;
+                            letter-spacing: 0.5px;
+                            font-weight: 500;
+                            margin: 10px 0 0;
+                            vertical-align: middle;
+
+                            .glyphicon {
+                                color: $cl-secondary;
+                                font-size: 20px;
+                            }
+
+                            a {
+                                @include linkHover();
+                            }
+                        }
+                    }
+                }
+
+                .col-md-12 {
+                    text-indent: 10px;
+                    padding: 0;
+
+                    > p {
+                        margin-top: 20px;
+                    }
+                }
+
+                .col-md-12 {
+                    .col-md-5 {
+                        padding: 0;
+                        margin-top: 20px;
+
+                        .bttn {
+                            @include btn();
+                            background: $cl-main;
+                        }
+                    }
+                }
+            }
+            margin-bottom: 20px;
+        }
+
+        .activeHover {
+            transition: .3s ease;
+            @media (min-width:992px) {
+                bottom: 50px!important;
+            }
+        }
+    }
+}
+
+//====================slider section====================
+
+.testimonials{
+    hr{
+        margin: 35px auto;
+    }
+    .quote-classic:before {
+        position: absolute;
+        top: 4px;
+        left: 5px;
+        z-index: 0;
+        font-family: "FontAwesome";
+        font-size: 30px;
+        line-height: 30px;
+        content: "\f10d";
+        transform: scaleX(-1) rotateY(-180deg);
+    }
+    .unit{
+        flex-direction: row;
+    }
+    .owl-pagination{
+        margin-top: 80px;
+        margin-left: -8px;
+        .owl-page{
+            display: inline-block;
+            line-height: 8px;
+            border-radius: 50%;
+            position: relative;
+            @include laptopMin{
+                margin-left: 28px;
+                width: 12px;
+                height: 12px;
+            }
+            @include laptop{
+                margin-left: 8px;
+                width: 8px;
+                height: 8px;
+            }
+        }
+        .owl-page span{
+            margin: 0;
+            &:hover{
+                background: #18afd3;
+            }
+            &:after{
+                @include laptopMin{
+                    content: '';
+                    position: absolute;
+                    top: -5px;
+                    left: -5px;
+                    width: 22px;
+                    height: 22px;
+                    border-radius: 50%;
+                    background: rgba(245, 126, 87, 0.22);
+                    transition: .2s ease-in;
+                    -webkit-transform: scale(0);
+                    transform: scale(0);
+                }
+            }
+        }
+        .active span{
+            &:after{
+                transform: scale(1);
+                background: rgba(24, 175, 211, 0.22);
+            }
+        }
+        .active span{
+            background: #18afd3;
+        }
+    }
+
+}

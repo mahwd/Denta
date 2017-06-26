@@ -1,0 +1,98 @@
+#hesenContacts {
+    .container {
+        .row {
+            .col-lg-8 {
+                .col-lg-12 {
+                    .header {
+                        @include headerText();
+                        font-size: 3em;
+                        font-weight: 400;
+                        color: #434445;
+                    }
+                    .underline {
+                        @include hrUnderline();
+                        border-top: 1px solid #fff;
+                        &:before {
+                            width: 100px;
+                            height: 3px;
+                        }
+                    }
+                    .namespace {
+                        font-weight: 400;
+                        font-size: 14px;
+                        text-indent: 2px;
+                        pointer-events: none;
+                        @media(max-width: 768px) {
+                            position: absolute;
+                            top: 10px;
+                            left: 25px;
+                        }
+                    }
+                    .booty {
+                        @include btn();
+                        background: $cl-main;
+                    }
+                }
+            }
+            .col-lg-4 {
+                .row {
+                    .col-lg-12 {
+                        .header {
+                            @include headerText();
+                        }
+                        .underline {
+                            @include hrUnderline();
+                        }
+                        #socialMediaIcons {
+                            a {
+                                @include icon(40px, 40px, #777, #ccc);
+                            }
+                        }
+                    }
+                }
+                .markable {}
+                .col-lg-8 {
+                    .link {
+                        font-size: .9em;
+                        color: #888;
+                        &:before {
+                            @include icon-left("\f041");
+                        }
+                    }
+                    &:hover {
+                        color: #666;
+                    }
+                }
+            }
+            .parag2 {
+                &:before {
+                    @include icon-left("\f073");
+                }
+            }
+            .telep {
+                cursor: pointer;
+                &:hover {
+                    color: #777;
+                }
+                &:before {
+                    @include icon-left("\f095");
+                }
+            }
+            .envelope {
+                cursor: pointer;
+                &:hover {
+                    text-decoration: underline;
+                    color: #777;
+                }
+                &:before {
+                    @include icon-left("\f003");
+                }
+            }
+        }
+    }
+}
+.map{
+    #mapContacts{
+        height: 522px;
+    }
+}
